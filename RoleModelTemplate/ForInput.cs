@@ -379,7 +379,7 @@ namespace RoleModelTemplate
 
         private static string[] ReadInputFile()
         {
-            var inputAsFileInfo = new FileInfo(new DirectoryInfo(".").Parent?.Parent?.Parent?.Parent?.Parent?.FullName + "/input.txt");
+            var inputAsFileInfo = new FileInfo(new DirectoryInfo(".").Parent?.Parent?.Parent?.Parent?.FullName + "/input.txt");
             var inputAsStringReader = new StreamReader(inputAsFileInfo.FullName);
             var allTextFromInput = inputAsStringReader.ReadToEnd();
             return allTextFromInput.Split('\n');
