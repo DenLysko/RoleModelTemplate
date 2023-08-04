@@ -141,10 +141,14 @@ namespace RoleModelTemplate
 
         private static void AddSupportString(List<string> output, eDocPosition docPosition)
         {
-            output.Add("");
-            output.Add(@"// Временная мера, после обновления ЭТОСа скорее всего можно будет убрать. (Лыско_ДОПИС)");
-            output.Add(@"routeArg.pUser = (tUser)routeArg.pUser.ReadObjectAsNew(eReadMode.All, routeArg);");
-            output.Add("");
+            // ЭТОС починили)
+            {
+                //output.Add("");
+                //output.Add(@"// Временная мера, после обновления ЭТОСа скорее всего можно будет убрать. (Лыско_ДОПИС)");
+                //output.Add(@"routeArg.pUser = (tUser)routeArg.pUser.ReadObjectAsNew(eReadMode.All, routeArg);");
+                //output.Add("");
+            }
+
             output.Add(@"// Все роли пользователя");
             output.Add("List<string> lstKeyNum = routeArg.pUser.GetUserGroupProfileKod();");
             output.Add("");
