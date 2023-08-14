@@ -110,7 +110,7 @@ namespace RoleModelTemplate
 
         private static void GenerateBlockByRole(List<string> output, string role, EnumFromInput enumWithStatusses)
         {
-            output.Add("    else if (lstKeyNum.Contains(\"" + role + "\".ToLower()))");
+            output.Add("    if (lstKeyNum.Contains(\"" + role + "\".ToLower()))");
             output.Add("    {");
             output.Add("        switch (pPaper.iStatusC)");
             output.Add("        {");
