@@ -148,7 +148,8 @@ namespace RoleModelTemplate
                 //output.Add(@"routeArg.pUser = (tUser)routeArg.pUser.ReadObjectAsNew(eReadMode.All, routeArg);");
                 //output.Add("");
             }
-
+            
+            output.Add("");
             output.Add(@"// Все роли пользователя");
             output.Add("List<string> lstKeyNum = routeArg.pUser.GetUserGroupProfileKod();");
             output.Add("");
