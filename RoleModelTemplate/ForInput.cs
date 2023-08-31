@@ -27,7 +27,7 @@ namespace RoleModelTemplate
     }
 
 
-    public class ForInput
+    public class ForInput   
     {
 
 
