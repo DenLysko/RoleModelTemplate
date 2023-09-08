@@ -398,5 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Special for this solution
-RoleModelTemplate/input.txt
-RoleModelTemplate/output.cs
+input.txt
+output.cs
