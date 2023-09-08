@@ -397,6 +397,6 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-# Special for thid solution
+# Special for this solution
 RoleModelTemplate/input.txt
 RoleModelTemplate/output.cs
