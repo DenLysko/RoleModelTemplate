@@ -34,6 +34,8 @@ namespace RoleModelTemplate
         public static void Main()
         {
             var inputAsStrings = ReadInputFile();
+            if (inputAsStrings is null)
+                return;
             GenerateScriptForRoleModel(inputAsStrings);
         }
 
@@ -379,7 +381,14 @@ namespace RoleModelTemplate
 
         private static string[] ReadInputFile()
         {
-            var inputAsFileInfo = new FileInfo(new DirectoryInfo(".").Parent?.Parent?.Parent?.Parent?.FullName + "/input.txt");
+            var pathToInput = new DirectoryInfo(".").Parent?.Parent?.Parent?.Parent?.FullName + "/input.txt";
+            if (!File.Exists(pathToInput))
+            {
+                File.Create(pathToInput);
+                Console.WriteLine("Файл input.txt был создан. Введите в него необходимые данные");
+                return null;
+            }
+            var inputAsFileInfo = new FileInfo(pathToInput);
             var inputAsStringReader = new StreamReader(inputAsFileInfo.FullName);
             var allTextFromInput = inputAsStringReader.ReadToEnd();
             return allTextFromInput.Split('\n');

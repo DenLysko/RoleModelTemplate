@@ -179,7 +179,12 @@ namespace RoleModelTemplate
 
         private static void WriteInOutPutFile(List<string> output)
         {
-            var outputAsFileInfo = new FileInfo(new DirectoryInfo(".").Parent?.Parent?.Parent?.Parent?.FullName + "/output.cs");
+            var pathToOutput = new DirectoryInfo(".").Parent?.Parent?.Parent?.Parent?.FullName + "/input.txt";
+            if (!File.Exists(pathToOutput))
+            {
+                File.Create(pathToOutput).Close();
+            }
+            var outputAsFileInfo = new FileInfo(pathToOutput);
             var outputAsStringWriter = new StreamWriter(outputAsFileInfo.FullName);
 
             foreach (var str in output)
