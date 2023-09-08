@@ -67,7 +67,7 @@ namespace RoleModelTemplate
                         break;
                     case eTypeOfRoleScript.ColumnsVisible:
                         output.Add("    pSOANR.ctrlManagerData.SetActiveViewColumn4Visible(" +
-                            item.ID + ", 0, " + item.VariableName + ");  // " + item.NameInETOS);
+                            item.ID + ", 0, " + item.VariableName + ", routeArg: routeArg);  // " + item.NameInETOS);
                         break;
                     case eTypeOfRoleScript.RowsVisible:
                         {
@@ -82,7 +82,7 @@ namespace RoleModelTemplate
                         break;
                     case eTypeOfRoleScript.ColumnsEditing:
                         output.Add("    ((ManagerDataControl)pSOANR.ctrlManagerData).SetActiveViewColumn4DisableEditor(" +
-                            item.ID + ", 0, !" + item.VariableName + ");");
+                            item.ID + ", 0, !" + item.VariableName + ", routeArg: routeArg);");
                         break;
                     case eTypeOfRoleScript.RowsEditing:
                         output.Add("   pSOANR.pCRMDK.SetRowDisableEditorInPropertyByID(" +
