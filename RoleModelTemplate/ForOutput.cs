@@ -81,14 +81,13 @@ namespace RoleModelTemplate
                         }
                         break;
                     case eTypeOfRoleScript.ColumnsEditing:
-                        output.Add("    ((ManagerDataControl)pSOANR.ctrlManagerData).SetActiveViewColumn4DisableEditor(" +
+                        output.Add("    pSOANR.ctrlManagerData.SetActiveViewColumn4DisableEditor(" +
                             item.ID + ", 0, !" + item.VariableName + ", routeArg: routeArg);");
                         break;
                     case eTypeOfRoleScript.RowsEditing:
                         output.Add("   pSOANR.pCRMDK.SetRowDisableEditorInPropertyByID(" +
                             item.ID + ", !" + item.VariableName + ");");
                         break;
-
                 }
             }
             output.Add("}");
