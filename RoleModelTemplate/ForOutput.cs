@@ -62,8 +62,8 @@ namespace RoleModelTemplate
                 switch (typeOfRoleScript)
                 {
                     case eTypeOfRoleScript.Buttons:
-                        output.Add("    pSOANR.ctrlManagerData?.SetCommandToolBarButtonItem8Visible(" +
-                            item.ID + ", " + item.VariableName + ");  // " + item.NameInETOS);
+                        output.Add($"    SetButtonVisibilityIfVisible(pSOANR, " +
+                            $"{item.ID}, {item.VariableName});");
                         break;
                     case eTypeOfRoleScript.ColumnsVisible:
                         output.Add("    pSOANR.ctrlManagerData.SetActiveViewColumn4Visible(" +
