@@ -111,11 +111,11 @@ namespace RoleModelTemplate
         {
             output.Add("    if (lstKeyNum.Contains(\"" + role + "\".ToLower()))");
             output.Add("    {");
-            output.Add("        switch (pPaper.iStatusC)");
+            output.Add($"        switch (({enumWithStatusses.Name})pPaper.iStatusC)");
             output.Add("        {");
             foreach (var anotherEnum in enumWithStatusses.Enums)
             {
-                output.Add("            case (long)" + enumWithStatusses.Name + "." +  anotherEnum + ":");
+                output.Add("            case " + enumWithStatusses.Name + "." +  anotherEnum + ":");
                 output.Add("                {");
                 output.Add("");
                 output.Add("                }");
