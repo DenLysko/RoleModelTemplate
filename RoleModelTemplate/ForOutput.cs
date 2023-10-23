@@ -19,8 +19,9 @@ namespace RoleModelTemplate
             WriteInOutPutFile(output);
         }
 
-        private static void GenerateOutput(List<Item> buttons, List<string> roles, EnumFromInput enumWithStatusses,
-            eDocPosition docPosition, eTypeOfRoleScript typeOfRoleScript, List<string> output)
+        private static void GenerateOutput(List<Item> buttons, List<string> roles,
+            EnumFromInput enumWithStatusses, eDocPosition docPosition, 
+            eTypeOfRoleScript typeOfRoleScript, List<string> output)
         {
             switch (typeOfRoleScript)
             {
