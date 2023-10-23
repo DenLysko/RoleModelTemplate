@@ -157,7 +157,7 @@ namespace RoleModelTemplate
             if (docPosition == eDocPosition.Focus)
                 output.Add("if (pSOANR.pFocusedObject is not tPaper pPaper)");
             else
-                output.Add("if (pSOANR.pObjectFromExternal4Filtr is not tPaper pPaper");
+                output.Add("if (pSOANR.pObjectFromExternal4Filtr is not tPaper pPaper)");
             output.Add("    return null;");
             output.Add("");
         }
